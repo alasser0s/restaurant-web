@@ -40,7 +40,7 @@ export default function OrderPage() {
     <div className="max-w-6xl mx-auto py-16 px-4">
       <h2 className="text-3xl font-serif text-gold mb-8">Your Order</h2>
       {cartDetails.length === 0 ? (
-        <p className="text-gray-300 font-light">
+        <p className="text-gray-900/60 bg-darkbg:text-gray-300 font-light">
           Your cart is empty. Please add items from our <a href="/menu" className="text-gold hover:opacity-90">menu</a>.
         </p>
       ) : (
@@ -48,16 +48,16 @@ export default function OrderPage() {
           <ul className="space-y-4 mb-6">
             {cartDetails.map(item => (
               <li key={item.id} className="flex justify-between items-center font-light">
-                <span className="text-gray-200">
+                <span className="dark:text-gray-200 text-black">
                   {item.name} <span className="text-gray-400">x {item.quantity}</span>
                 </span>
-                <span className="text-gray-200">${item.price * item.quantity}</span>
+                <span className="dark:text-gray-200 text-black">${item.price * item.quantity}</span>
               </li>
             ))}
           </ul>
           <div className="flex justify-between items-center mb-6 pt-4 border-t border-gray-800">
-            <span className="font-semibold text-gray-200">Total</span>
-            <span className="font-semibold text-gray-200">${total}</span>
+            <span className="font-semibold dark:text-gray-200 text-black">Total</span>
+            <span className="font-semibold dark:text-gray-200 text-black">${total}</span>
           </div>
           <button 
             onClick={handleOrder} 

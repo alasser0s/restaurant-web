@@ -6,7 +6,6 @@
 
 @layer base {
   body {
-    @apply bg-white text-black dark:bg-darkbg dark:text-gray-200;
     font-family: 'Inter', sans-serif;
   }
 }

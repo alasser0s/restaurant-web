@@ -30,7 +30,7 @@ export default function BookingForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6 max-w-md">
       <div>
-        <label className="block mb-1 text-gray-300 font-semibold">Name</label>
+        <label className="block mb-1 dark:text-gray-300 text-black font-semibold">Name</label>
         <input 
           type="text" 
           className="w-full border border-gray-700 bg-gray-800 rounded p-2 text-white"
@@ -40,7 +40,7 @@ export default function BookingForm() {
         />
       </div>
       <div>
-        <label className="block mb-1 text-gray-300 font-semibold">Date & Time</label>
+        <label className="block mb-1 dark:text-gray-300 text-black font-semibold">Date & Time</label>
         <input 
           type="datetime-local" 
           className="w-full border border-gray-700 bg-gray-800 rounded p-2 text-white"
@@ -50,7 +50,7 @@ export default function BookingForm() {
         />
       </div>
       <div>
-        <label className="block mb-1 text-gray-300 font-semibold">Number of People</label>
+        <label className="block mb-1 dark:text-gray-300 text-black font-semibold">Number of People</label>
         <input 
           type="number"
           min="1" 

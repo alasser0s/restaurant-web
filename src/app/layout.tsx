@@ -24,9 +24,11 @@ export default function RootLayout({
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
       localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
       localStorage.setItem('theme', 'light');
     }
   }, [theme]);
@@ -36,8 +38,8 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en">
-      <body className="min-h-screen flex flex-col bg-white text-black dark:bg-darkbg dark:text-gray-200 selection:bg-gold selection:text-white">
+<html lang="en" className={theme === 'dark' ? 'dark' : ''}>
+<body className="min-h-screen flex flex-col bg-white text-black dark:bg-darkbg dark:text-gray-200 selection:bg-gold selection:text-white">
         <Header theme={theme} onToggleTheme={toggleTheme} />
         <main className="pt-20 flex-1">{children}</main>
         <Footer />

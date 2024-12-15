@@ -19,13 +19,13 @@ export default function MenuItemCard({item, onAddToCart}: {item: MenuItem, onAdd
     >
       <div>
         <h3 className="text-xl font-serif text-gold mb-2">{item.name}</h3>
-        <p className="text-gray-300 text-sm mb-4">{item.description}</p>
+        <p className="dark:text-gray-200 text-black text-sm mb-4">{item.description}</p>
       </div>
       <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-800">
-        <span className="text-gray-200 font-semibold text-lg">${item.price}</span>
+        <span className="dark:text-gray-200 text-black font-semibold text-lg">${item.price}</span>
         <button 
           onClick={() => onAddToCart(item.id)}
-          className="bg-gold text-black px-4 py-2 rounded hover:opacity-90 transition text-sm font-semibold"
+          className="bg-gold text-black px-4 py-2 rounded hover:opacity-90 transition text-sm font-bold"
         >
           Add to Cart
         </button>

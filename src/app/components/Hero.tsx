@@ -14,7 +14,7 @@ export default function Hero() {
         className="relative z-10 text-center text-white px-4"
       >
         <h1 className="text-5xl font-serif text-gold mb-4">La Bella Vita</h1>
-        <p className="text-xl mb-8">Authentic Italian Cuisine in the Heart of the City</p>
+        <p className="text-xl mb-8 dark:text-gray-300 text-black">Authentic Italian Cuisine in the Heart of the City</p>
         <div className="space-x-4">
           <Link 
             href="/menu" 
