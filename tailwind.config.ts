@@ -1,19 +1,21 @@
-import type { Config } from "tailwindcss";
-
-export default {
-  darkMode: "class",
+// tailwind.config.js
+module.exports = {
+  darkMode: 'class', // Make sure this is set
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        gold: '#D4AF37',
+        darkbg: '#121212', // Define your custom dark background color
       },
-    },
+      fontFamily: {
+        'sans': ['Inter', 'sans-serif'],
+        'serif': ['Playfair Display', 'serif'],
+      },
+    }
   },
   plugins: [],
-} satisfies Config;
+}
